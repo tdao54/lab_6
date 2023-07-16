@@ -1,8 +1,10 @@
 
 def password_encode(password):
     encode_pass = ""
-    for i in password:
-        i = int(i) + 3
+    for i in password: #for each char in password str 
+        i = int(i) + 3  #convert to int and add 3 
+        if i >= 10: #if i is over 10 goes back to 0 and adds remainder
+            i = i - 10
         encode_pass += str(i)
     return encode_pass 
 
